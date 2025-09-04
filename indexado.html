@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mapa Interactivo</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+
+    .background {
+      width: 100%;
+      height: 100%;
+      background-image: url('Mapa.jpg'); /* reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    /* Mantener tus hotspots visibles */
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      /* estilos adicionales que ya tengas */
+    }
+  </style>
+</head>
+<body>
+
+<div class="stage" id="stage">
+  <div class="background" id="bg"></div>
+
+  <!-- Texto centrado sobre la imagen -->
+<div class="centered-text1">
+  <svg width="300" height="150" viewBox="0 0 300 150">
+    <defs>
+      <path id="curve" d="M10,100 Q150,10 290,100" />
+      <!-- Ajusta Q150,10 para modificar la curvatura -->
+    </defs>
+    <text fill="white" font-family="Comic Sans MS" font-size="1.2rem" font-weight="bold" text-anchor="middle" style="">
+      <textPath href="#curve" startOffset="50%">
+        Peregrinación a La Meca
+      </textPath>
+    </text>
+  </svg>
+</div>
+
+   <div class="centered-text">Hajj: Desastre y riesgos</div>
+
+  <!-- Hotspots en las puertas -->
+  <div class="hotspot hs-left" data-room="izquierda">¿Qué pasó?</div>
+  <div class="hotspot hs-center" data-room="central">¿Por que se convirtió en desastre?</div>
+  <div class="hotspot hs-right" data-room="derecha">¿Cuales fueron los riesgos?</div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+  <div class="flash" id="flash"></div>
+
+  <!-- Contenedor de habitación -->
+  <div class="room" id="room">
+    <div class="room-card" id="roomCard" role="dialog" aria-hidden="true">
+      <div class="room-header">
+        <div class="room-title">
+          <h2 id="roomTitle">Habitación</h2>
+          <div style="font-size:12px;color:#666">Aquí irá la temática</div>
+        </div>
+        <div class="close" id="closeBtn">Cerrar ✕</div>
+      </div>
+      <div class="room-content" id="roomContent">
+        <div class="room-theme" id="roomTheme">
+          <strong>Bienvenido</strong> — reemplaza este contenido.
+        </div>
+      </div>
+      <div class="room-footer">
+        <button class="btn" id="volverBtn">Volver al mapa</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

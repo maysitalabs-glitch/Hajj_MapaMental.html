@@ -120,12 +120,13 @@ html,body{
 }
 .btn {
   background:var(--accent);
-  color:white;
+  color:black;
   padding:8px 12px;
   border-radius:8px;
   cursor:pointer;
   border:none;
   font-weight:600;
+  color: black;
 }
 
 .flash {
@@ -201,4 +202,50 @@ html,body{
   font-weight: bold;
   text-align: center;
   pointer-events: none;
+}
+
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #1a1a1a, #333333);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.portada {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  max-width: 600px;
+  width: 90%;
+}
+
+h1, h2, h3, p {
+  margin: 10px 0;
+}
+
+.boton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: #d4af37;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.boton:hover {
+  background: #b8912f;
+  transform: scale(1.05);
 }

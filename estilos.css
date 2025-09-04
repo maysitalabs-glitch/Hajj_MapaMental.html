@@ -13,13 +13,12 @@ html,body{
 
 .stage{
   position:relative;
-  max-width:900px;
+  max-width:780px;
   margin:18px auto;
   width:95%;
   height:calc(95vh - 36px);
   overflow:hidden;
   border-radius:6px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.15);
   background:#fff;
 }
 
@@ -40,9 +39,9 @@ html,body{
 }
 
 /* Coordenadas ajustadas */
-.hs-left{ left:14.95%; top:79.04%; width:12.23%; height:14.89%; }
-.hs-center{ left:43.48%; top:77.89%; width:14.95%; height:17.18%; }
-.hs-right{ left:73.37%; top:79.04%; width:12.23%; height:14.89%; }
+.hs-left{ left:23.8%; top:64%; width:11%; height:22%; }
+.hs-center{ left:41%; top:60%; width:16%; height:25%; }
+.hs-right{ left:63%; top:63%; width:11%; height:22%; }
 
 .overlay{
   position:absolute;
@@ -77,7 +76,6 @@ html,body{
   max-height:86%;
   background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
   border-radius:12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
   overflow:auto;
   padding:22px;
   position:relative;
@@ -154,4 +152,53 @@ html,body{
   .hs-center{ left:38%; top:68%; width:24%; }
   .hs-right{ left:72%; top:70%; width:16%; }
   .room-card{ padding:16px; }
+}
+
+.hotspot {
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotspot:hover {
+  transform: scale(1.1);
+  background: rgba(0, 123, 255, 0.8);
+}
+
+.centered-text1 {
+  position: absolute;
+  top: 45%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Comic Sans;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none;
+}
+
+.centered-text {
+  position: absolute;
+  top: 47%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Comic Sans;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none;
 }

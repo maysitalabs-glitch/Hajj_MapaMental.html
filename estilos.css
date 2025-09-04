@@ -219,7 +219,11 @@ html,body{
 }
 
 .room-card {
-  background: linear-gradient(145deg, #87bfff, #a6d3ff); /* Azul cielo suave con degradado */
+  background: linear-gradient(
+    145deg,
+    rgba(135, 191, 255, 0.65),  /* Azul cielo con 85% de opacidad */
+    rgba(166, 211, 255, 0.85)   /* Otro tono azul cielo con 85% */
+  );
   border: 3px solid #d4af37; /* Dorado metálico */
   border-radius: 20px;
   padding: 20px;
@@ -227,6 +231,7 @@ html,body{
   color: #1a1a1a; /* Texto oscuro para máxima legibilidad */
   font-family: "Georgia", serif;
   box-shadow: 0 0 12px rgba(212, 175, 55, 0.3), 0 0 20px rgba(135, 191, 255, 0.5);
+  backdrop-filter: blur(4px); /* Efecto elegante de vidrio */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -236,7 +241,7 @@ html,body{
 }
 
 .room-card h2 {
-  color: #ffc40c; /* Dorado elegante para títulos */
+  color: #d4af37; /* Dorado elegante para títulos */
   border-bottom: 2px solid #d4af37;
   padding-bottom: 5px;
   margin-bottom: 15px;
@@ -249,7 +254,7 @@ html,body{
 .room-card li {
   line-height: 1.7;
   font-size: 1rem;
-  color: #1a1a1a; /* Texto negro grisáceo para contrastar */
+  color: #1a1a1a; /* Texto negro grisáceo para contraste */
 }
 
 .room-card ul, .room-card ol {
